@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onlineshop/constants.dart';
+import 'package:onlineshop/models/product.dart';
+import 'package:onlineshop/screens/home/components/categories_bar.dart';
+import 'package:onlineshop/screens/home/components/new_arrival.dart';
+import 'package:onlineshop/screens/home/components/popular.dart';
+import 'package:onlineshop/screens/home/components/section_title.dart';
+import 'package:onlineshop/screens/home/components/search_bar_with_filter_button.dart';
+import 'package:onlineshop/models/category.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -27,7 +34,7 @@ class HomeScreen extends StatelessWidget {
               width: defaultPadding / 2,
             ),
             Text(
-              '280 Bui Huu Nghia, Binh Thanh',
+              'GDSC SGU',
               style: Theme.of(context).textTheme.subtitle2,
             ),
           ],
@@ -39,7 +46,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(defaultPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,6 +62,13 @@ class HomeScreen extends StatelessWidget {
               'best Sneakers for you',
               style: TextStyle(fontSize: 18),
             ),
+            const SearchBarWithFilterButton(),
+            const CategoriesBar(),
+            const SizedBox(
+              height: defaultPadding / 3,
+            ),
+            const NewArrival(),
+            const Popular(),
           ],
         ),
       ),
