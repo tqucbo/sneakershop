@@ -8,6 +8,7 @@ import 'package:onlineshop/screens/home/components/popular.dart';
 import 'package:onlineshop/screens/home/components/section_title.dart';
 import 'package:onlineshop/screens/home/components/search_bar_with_filter_button.dart';
 import 'package:onlineshop/models/category.dart';
+import 'package:onlineshop/screens/home/components/side_bar_list_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,14 +16,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SideBarListItem(),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(
-            'assets/icons/menu.svg',
-          ),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: SvgPicture.asset(
+                'assets/icons/menu.svg',
+                height: 13,
+                width: 13,
+              ),
+            );
+          },
         ),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
