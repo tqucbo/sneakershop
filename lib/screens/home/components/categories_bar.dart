@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onlineshop/constants.dart';
-import 'package:onlineshop/models/category.dart';
+import 'package:onlineshop/models/category_product.dart';
 import 'package:onlineshop/screens/home/components/category_card.dart';
 
 class CategoriesBar extends StatelessWidget {
@@ -14,14 +14,14 @@ class CategoriesBar extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: List.generate(
-          categories.length,
+          categorieproducts.length,
           (index) => Padding(
             padding: const EdgeInsets.only(
               right: defaultPadding,
             ),
             child: CategoryCard(
-              icon: categories[index].icon,
-              title: categories[index].title,
+              icon: categorieproducts[index].icon,
+              title: categorieproducts[index].title,
               press: () {},
             ),
           ),

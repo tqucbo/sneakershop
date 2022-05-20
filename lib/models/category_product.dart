@@ -1,26 +1,26 @@
-class Category {
+class CategoryProduct {
   final String icon, title;
 
-  Category({
+  CategoryProduct({
     required this.icon,
     required this.title,
   });
 }
 
-List<Category> categories = [
-  Category(
+List<CategoryProduct> categorieproducts = [
+  CategoryProduct(
     icon: 'assets/icons/jordan.svg',
     title: 'Air Jordan 1',
   ),
-  Category(
+  CategoryProduct(
     icon: 'assets/icons/nike.svg',
     title: 'Air Force 1',
   ),
-  Category(
+  CategoryProduct(
     icon: 'assets/icons/adidas.svg',
     title: 'Adidas',
   ),
-  Category(
+  CategoryProduct(
     icon: 'assets/icons/converse.svg',
     title: 'Converse',
   ),

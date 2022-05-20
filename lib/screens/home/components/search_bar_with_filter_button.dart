@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onlineshop/constants.dart';
+import 'package:onlineshop/screens/home/dialog/filter_dialog.dart';
 import 'package:onlineshop/screens/home/search_screen.dart';
 
 class SearchBarWithFilterButton extends StatelessWidget {
@@ -42,7 +43,11 @@ class SearchBarWithFilterButton extends StatelessWidget {
                 height: 48,
                 width: 48,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (context) => const FilterDialog());
+                  },
                   child: SvgPicture.asset('assets/icons/Filter.svg'),
                   style: ElevatedButton.styleFrom(
                     primary: primaryColor,
