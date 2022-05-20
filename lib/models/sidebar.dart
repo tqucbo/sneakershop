@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:onlineshop/screens/favourite/favourite_screen.dart';
 import 'package:onlineshop/screens/home/home_screen.dart';
+import 'package:onlineshop/screens/home/search_screen.dart';
 
 class SideBar {
   final String text;
@@ -20,6 +21,11 @@ List<SideBar> sideBarItems = [
     text: 'Home',
     iconData: IconlyBold.home,
     route: const HomeScreen(),
+  ),
+  SideBar(
+    text: 'Search',
+    iconData: IconlyBold.search,
+    route: const SearchPage(searchValue: ''),
   ),
   SideBar(
     text: 'Wallet',

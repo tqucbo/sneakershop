@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onlineshop/constants.dart';
 import 'package:onlineshop/models/product.dart';
+import 'package:onlineshop/screens/details/details_screen.dart';
 import 'package:onlineshop/screens/home/components/product_card.dart';
 import 'package:onlineshop/screens/home/components/section_title.dart';
 
@@ -32,7 +33,16 @@ class Popular extends StatelessWidget {
                   title: products[index].title,
                   price: products[index].price,
                   bgColor: products[index].color,
-                  press: () {},
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailsScreen(
+                          product: products[index],
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),

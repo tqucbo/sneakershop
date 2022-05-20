@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onlineshop/constants.dart';
+import 'package:onlineshop/screens/home/search_screen.dart';
 
 class SearchBarWithFilterButton extends StatelessWidget {
   const SearchBarWithFilterButton({
@@ -13,6 +14,15 @@ class SearchBarWithFilterButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: defaultPadding),
       child: Form(
         child: TextFormField(
+          onFieldSubmitted: (value) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => SearchPage(
+                  searchValue: value,
+                ),
+              ),
+            );
+          },
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.white,
