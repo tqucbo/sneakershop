@@ -5,32 +5,22 @@ import 'package:onlineshop/screens/home/components/categories_bar.dart';
 import 'package:onlineshop/screens/home/components/new_arrival.dart';
 import 'package:onlineshop/screens/home/components/popular.dart';
 import 'package:onlineshop/screens/home/components/search_bar_with_filter_button.dart';
-import 'package:onlineshop/screens/sidebar/side_bar_list_item.dart';
+import 'package:onlineshop/screens/sidebar/component/side_bar_menu_button.dart';
+import 'package:onlineshop/screens/sidebar/side_bar_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  final Widget? drawerButton;
+
+  const HomeScreen({Key? key, this.drawerButton}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const SideBarListItem(),
+      drawer: const SideBar(),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              icon: SvgPicture.asset(
-                'assets/icons/menu.svg',
-                height: 13,
-                width: 13,
-              ),
-            );
-          },
-        ),
+        leading: const SideBarMenuButton(),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
