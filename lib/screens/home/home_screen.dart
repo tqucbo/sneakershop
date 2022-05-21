@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const SideBar(),
+      drawer: const SideBarScreen(),
       appBar: const HomeScreenAppBar(),
       body: SingleChildScrollView(
         child: Padding(

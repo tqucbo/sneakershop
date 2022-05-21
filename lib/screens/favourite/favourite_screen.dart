@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onlineshop/screens/sidebar/component/side_bar_menu_button.dart';
+import 'package:onlineshop/screens/sidebar/components/side_bar_menu_button.dart';
 import 'package:onlineshop/screens/sidebar/side_bar_screen.dart';
 
 class FavouriteScreen extends StatefulWidget {
@@ -15,7 +15,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const SideBar(),
+      drawer: const SideBarScreen(),
       appBar: AppBar(
         leading: const SideBarMenuButton(),
       ),

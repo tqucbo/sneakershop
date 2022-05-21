@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Sneaker Shop',
       theme: ThemeData(
         scaffoldBackgroundColor: bgColor,
-        primarySwatch: Colors.blue,
+        primaryColor: primaryColor,
         fontFamily: 'GoogleSans',
         textTheme: const TextTheme(
           bodyText2: TextStyle(

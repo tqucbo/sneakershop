@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onlineshop/constants.dart';
-import 'package:onlineshop/screens/sidebar/component/side_bar_menu_button.dart';
+import 'package:onlineshop/screens/sidebar/components/side_bar_menu_button.dart';
 
 class HomeScreenAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeScreenAppBar({

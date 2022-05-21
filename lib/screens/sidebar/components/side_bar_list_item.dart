@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onlineshop/constants.dart';
 import 'package:onlineshop/models/sidebar.dart';
-import 'package:onlineshop/screens/sidebar/component/side_bar_item.dart';
+import 'package:onlineshop/screens/sidebar/components/side_bar_item.dart';
 
 class SideBarListItem extends StatefulWidget {
   const SideBarListItem({
