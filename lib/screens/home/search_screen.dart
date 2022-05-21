@@ -5,7 +5,7 @@ import 'package:onlineshop/screens/home/components/search_bar_with_filter_button
 import 'package:onlineshop/screens/sidebar/side_bar_screen.dart';
 
 class SearchPage extends StatelessWidget {
-  final String searchValue;
+  final String? searchValue;
 
   const SearchPage({Key? key, required this.searchValue}) : super(key: key);
 
@@ -22,9 +22,11 @@ class SearchPage extends StatelessWidget {
             child: Column(
               children: [
                 const SearchBarWithFilterButton(),
-                Text('Search results showing for value : \'' +
-                    searchValue +
-                    '\''),
+                Text(searchValue != null
+                    ? 'Search results showing for value : \'' +
+                        searchValue! +
+                        '\''
+                    : 'Please type something you want to search.'),
               ],
             ),
           ),

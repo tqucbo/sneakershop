@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onlineshop/constants.dart';
 import 'package:onlineshop/screens/home/dialog/filter_dialog.dart';
 import 'package:onlineshop/screens/home/search_screen.dart';
+import 'package:onlineshop/screens/sidebar/component/side_bar_list_item.dart';
 
 class SearchBarWithFilterButton extends StatelessWidget {
   const SearchBarWithFilterButton({
@@ -16,6 +17,7 @@ class SearchBarWithFilterButton extends StatelessWidget {
       child: Form(
         child: TextFormField(
           onFieldSubmitted: (value) {
+            SideBarListItemState.currentSideBarItemSelected = 1;
             Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => SearchPage(

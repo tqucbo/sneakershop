@@ -9,11 +9,16 @@ class SideBarListItem extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<SideBarListItem> createState() => _SideBarListItemState();
+  State<SideBarListItem> createState() => SideBarListItemState();
 }
 
-class _SideBarListItemState extends State<SideBarListItem> {
-  static int _currentSideBarItemSelected = 0;
+class SideBarListItemState extends State<SideBarListItem> {
+  static int currentSideBarItemSelected = 0;
+
+  @override
+  void setState(VoidCallback fn) {
+    super.setState(fn);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,18 +30,18 @@ class _SideBarListItemState extends State<SideBarListItem> {
           child: SideBarItem(
               press: () {
                 Scaffold.of(context).closeDrawer();
-                if (index != _currentSideBarItemSelected) {
+                if (index != currentSideBarItemSelected) {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                         builder: (context) => sideBarItems[index].route),
                   );
-                  _currentSideBarItemSelected = index;
+                  currentSideBarItemSelected = index;
                   setState(() {});
                 }
               },
               iconData: sideBarItems[index].iconData,
               text: sideBarItems[index].text,
-              isActive: _currentSideBarItemSelected == index ? true : false),
+              isActive: currentSideBarItemSelected == index ? true : false),
         ),
       ),
     );

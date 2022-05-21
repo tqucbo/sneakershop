@@ -25,7 +25,7 @@ List<SideBar> sideBarItems = [
   SideBar(
     text: 'Search',
     iconData: IconlyBold.search,
-    route: const SearchPage(searchValue: ''),
+    route: const SearchPage(searchValue: null),
   ),
   SideBar(
     text: 'Wallet',

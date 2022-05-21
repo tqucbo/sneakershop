@@ -25,14 +25,16 @@ class _SideBarState extends State<SideBar> {
     return Drawer(
       child: Container(
           color: bgColor,
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              children: const [
-                AvatarAndMyName(),
-                SideBarListItem(),
-              ],
-            ),
+          child: Column(
+            children: const [
+              AvatarAndMyName(),
+              Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: SideBarListItem(),
+                ),
+              ),
+            ],
           )),
     );
   }

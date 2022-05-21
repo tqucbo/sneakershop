@@ -12,38 +12,42 @@ class FilterDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const HeaderOfTheFilterDialog(),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(
-            defaultPadding,
-          ),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Category',
-                  style: Theme.of(context).textTheme.headline6,
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(
+          defaultPadding,
+        ),
+        child: Column(
+          children: [
+            const HeaderOfTheFilterDialog(),
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Category',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const CategoryFilterListItem(),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const PricingSlider(),
+                    const SizeSlider(),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                  ],
                 ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const CategoryFilterListItem(),
-                const SizedBox(
-                  height: 16,
-                ),
-                const PricingSlider(),
-                const SizeSlider(),
-                const SizedBox(
-                  height: 16,
-                ),
-                const ApplyButton()
-              ],
+              ),
             ),
-          ),
+            const ApplyButton(),
+          ],
         ),
       ),
     );
