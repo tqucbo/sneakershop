@@ -3,6 +3,7 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:onlineshop/screens/favourite/favourite_screen.dart';
 import 'package:onlineshop/screens/home/home_screen.dart';
 import 'package:onlineshop/screens/home/search_screen.dart';
+import 'package:onlineshop/screens/order/order_screen.dart';
 import 'package:onlineshop/screens/wallet/wallet_screen.dart';
 
 class SideBar {
@@ -36,7 +37,7 @@ List<SideBar> sideBarItems = [
   SideBar(
     text: 'My order',
     iconData: IconlyBold.bag2,
-    route: const Scaffold(),
+    route: const OrderScreen(),
   ),
   SideBar(
     text: 'Favourite',

@@ -63,11 +63,9 @@ class _WalletScreenState extends State<WalletScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: const SideBarMenuButton(),
-        title: Center(
-          child: Text(
-            'Wallet',
-            style: Theme.of(context).textTheme.headline6,
-          ),
+        title: Text(
+          'Wallet',
+          style: Theme.of(context).textTheme.headline6,
         ),
         actions: [
           IconButton(
