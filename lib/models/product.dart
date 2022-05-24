@@ -9,7 +9,7 @@ class Product {
     required this.image,
     required this.title,
     required this.price,
-    this.color =  const Color(0xffefeff2),
+    this.color = const Color(0xffefeff2),
   });
 }
 
@@ -18,13 +18,13 @@ List<Product> products = [
     title: 'High Patent Bred',
     price: 291,
     image: 'assets/images/aj1_1.png',
-    color: const Color(0xFFA9201B),
+    color: Colors.transparent,
   ),
   Product(
     title: 'Mid Barcelona',
     price: 164,
     image: 'assets/images/aj1_2.png',
-    color: const Color(0xFFd2120a),
+    color: Colors.transparent,
   ),
   Product(
     title: 'High Gold Toe',
@@ -42,7 +42,7 @@ List<Product> products = [
     title: 'Mid Carbon Fiber',
     price: 215,
     image: 'assets/images/aj1_5.png',
-    color: const Color(0xFF181618),
+    color: Colors.transparent,
   ),
   Product(
     title: 'High Shattered Backboard 3.0',

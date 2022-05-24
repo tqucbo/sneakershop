@@ -26,7 +26,7 @@ class ProductCard extends StatelessWidget {
           defaultPadding / 2,
         ),
         decoration: const BoxDecoration(
-          color: Colors.white,
+          color: Colors.transparent,
           borderRadius: BorderRadius.all(
             Radius.circular(
               defaultBorderRadius,

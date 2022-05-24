@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:onlineshop/about_us/about_us_screen.dart';
 import 'package:onlineshop/screens/favourite/favourite_screen.dart';
 import 'package:onlineshop/screens/home/home_screen.dart';
 import 'package:onlineshop/screens/home/search_screen.dart';
@@ -47,21 +48,21 @@ List<SideBar> sideBarItems = [
   SideBar(
     text: 'About us',
     iconData: IconlyBold.document,
-    route: const Scaffold(),
+    route: const AboutUsScreen(),
   ),
   SideBar(
     text: 'Privacy policy',
     iconData: IconlyBold.lock,
-    route: const Scaffold(),
+    route: const AboutUsScreen(),
   ),
   SideBar(
     text: 'Setting',
     iconData: IconlyBold.setting,
-    route: const Scaffold(),
+    route: const AboutUsScreen(),
   ),
   SideBar(
     text: 'Log out',
     iconData: IconlyBold.logout,
-    route: const Scaffold(),
+    route: const AboutUsScreen(),
   ),
 ];
