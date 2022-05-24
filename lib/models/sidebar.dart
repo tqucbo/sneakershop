@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:onlineshop/about_us/about_us_screen.dart';
+import 'package:onlineshop/privacy_policy/privacy_policy_screen.dart';
 import 'package:onlineshop/screens/favourite/favourite_screen.dart';
 import 'package:onlineshop/screens/home/home_screen.dart';
 import 'package:onlineshop/screens/home/search_screen.dart';
 import 'package:onlineshop/screens/order/order_screen.dart';
 import 'package:onlineshop/screens/wallet/wallet_screen.dart';
+import 'package:onlineshop/setting/setting_screen.dart';
 
 class SideBar {
   final String text;
@@ -53,12 +55,12 @@ List<SideBar> sideBarItems = [
   SideBar(
     text: 'Privacy policy',
     iconData: IconlyBold.lock,
-    route: const AboutUsScreen(),
+    route: const PrivacyPolicyScreen(),
   ),
   SideBar(
     text: 'Setting',
     iconData: IconlyBold.setting,
-    route: const AboutUsScreen(),
+    route: const SettingScreen(),
   ),
   SideBar(
     text: 'Log out',

@@ -20,7 +20,7 @@ class AboutUsScreen extends StatelessWidget {
           elevation: 0,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(defaultPadding / 2),
+          padding: const EdgeInsets.all(defaultPadding),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
