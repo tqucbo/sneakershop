@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onlineshop/constants.dart';
-import 'package:onlineshop/screens/home/home_screen.dart';
+import 'package:onlineshop/screens/welcome/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const HomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }

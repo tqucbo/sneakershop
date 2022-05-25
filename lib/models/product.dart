@@ -50,4 +50,10 @@ List<Product> products = [
     image: 'assets/images/aj1_6.png',
     color: const Color(0xFFdc5302),
   ),
+  Product(
+    title: 'High Patent Fearless',
+    price: 389,
+    image: 'assets/images/aj1_7.png',
+    color: Colors.transparent,
+  ),
 ];
