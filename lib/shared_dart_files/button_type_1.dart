@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:onlineshop/constants.dart';
 
-class NextButton extends StatelessWidget {
+class ButtonType1 extends StatelessWidget {
+  final String text;
   final VoidCallback press;
-  const NextButton({
+
+  const ButtonType1({
     Key? key,
     required this.press,
+    required this.text,
   }) : super(key: key);
 
   @override
@@ -32,7 +35,7 @@ class NextButton extends StatelessWidget {
                 height: 25,
                 child: Center(
                   child: Text(
-                    'Next',
+                    text,
                     style: Theme.of(context)
                         .textTheme
                         .subtitle2

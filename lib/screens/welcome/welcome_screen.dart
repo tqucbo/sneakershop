@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:onlineshop/constants.dart';
 import 'package:onlineshop/models/welcome_screen_data.dart';
 import 'package:onlineshop/screens/home/home_screen.dart';
+import 'package:onlineshop/screens/login/login_screen.dart';
 import 'package:onlineshop/screens/welcome/components/welcome_sub_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -71,27 +72,35 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         controller: _pageController,
         itemCount: welcomeScreenData.length,
         itemBuilder: (context, index) {
-          return WelcomeSubScreen(
-            title: welcomeScreenData[index].title,
-            subtitle: welcomeScreenData[index].subtitle,
-            image: welcomeScreenData[index].image,
-            press: () {
-              if (_currentWelcomeSubScreen == welcomeScreenData.length - 1) {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const HomeScreen(),
-                  ),
-                );
-              } else {
-                int _newSubScreen = _currentWelcomeSubScreen + 1;
-                _pageController.animateToPage(
-                  _newSubScreen,
-                  duration: const Duration(milliseconds: 350),
-                  curve: Curves.easeIn,
-                );
-              }
-              setState(() {});
-            },
+          return Padding(
+            padding: const EdgeInsets.all(defaultPadding),
+            child: WelcomeSubScreen(
+              title: welcomeScreenData[index].title,
+              subtitle: welcomeScreenData[index].subtitle,
+              image: welcomeScreenData[index].image,
+              textButton:
+                  _currentWelcomeSubScreen == welcomeScreenData.length - 1
+                      ? 'Let\'s go'
+                      : 'Next',
+              press: () {
+                if (_currentWelcomeSubScreen == welcomeScreenData.length - 1) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
+                  _currentWelcomeSubScreen = 0;
+                } else {
+                  int _newSubScreen = _currentWelcomeSubScreen + 1;
+                  _pageController.animateToPage(
+                    _newSubScreen,
+                    duration: const Duration(milliseconds: 350),
+                    curve: Curves.easeIn,
+                  );
+                }
+                setState(() {});
+              },
+            ),
           );
         },
         onPageChanged: (v) {

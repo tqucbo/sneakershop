@@ -12,7 +12,7 @@ import 'package:onlineshop/setting/setting_screen.dart';
 class SideBar {
   final String text;
   final IconData iconData;
-  final Widget route;
+  final Widget? route;
 
   SideBar({
     required this.route,
@@ -65,6 +65,6 @@ List<SideBar> sideBarItems = [
   SideBar(
     text: 'Log out',
     iconData: IconlyBold.logout,
-    route: const AboutUsScreen(),
+    route: null,
   ),
 ];

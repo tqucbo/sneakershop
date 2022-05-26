@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:awesome_card/awesome_card.dart';
 import 'package:onlineshop/constants.dart';
-import 'package:onlineshop/screens/home/dialog/components/apply_button.dart';
 import 'package:onlineshop/screens/sidebar/components/side_bar_menu_button.dart';
 
 import 'package:onlineshop/screens/sidebar/side_bar_screen.dart';
 import 'dart:math' as math;
+
+import 'package:onlineshop/shared_dart_files/button_type_1.dart';
 
 class WalletScreen extends StatefulWidget {
   const WalletScreen({Key? key}) : super(key: key);
@@ -252,7 +253,7 @@ class _WalletScreenState extends State<WalletScreen> {
               ),
             ),
           ),
-          const ApplyButton(),
+          ButtonType1(press: () {}, text: 'Apply'),
         ],
       ),
     );

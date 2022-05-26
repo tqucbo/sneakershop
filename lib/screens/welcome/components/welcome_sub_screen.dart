@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:onlineshop/constants.dart';
-import 'package:onlineshop/screens/welcome/components/next_button.dart';
+import 'package:onlineshop/shared_dart_files/button_type_1.dart';
 
 class WelcomeSubScreen extends StatelessWidget {
-  final String title, subtitle, image;
+  final String title, subtitle, image, textButton;
   final VoidCallback press;
 
   const WelcomeSubScreen({
@@ -12,6 +12,7 @@ class WelcomeSubScreen extends StatelessWidget {
     required this.subtitle,
     required this.image,
     required this.press,
+    required this.textButton,
   }) : super(key: key);
 
   @override
@@ -47,8 +48,9 @@ class WelcomeSubScreen extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          NextButton(
+          ButtonType1(
             press: press,
+            text: textButton,
           ),
         ],
       ),

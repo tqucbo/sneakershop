@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:onlineshop/constants.dart';
 import 'package:onlineshop/models/sidebar.dart';
 import 'package:onlineshop/screens/sidebar/components/side_bar_item.dart';
+import 'package:onlineshop/screens/welcome/welcome_screen.dart';
 
 class SideBarListItem extends StatefulWidget {
   const SideBarListItem({
@@ -30,12 +31,20 @@ class SideBarListItemState extends State<SideBarListItem> {
           child: SideBarItem(
               press: () {
                 Scaffold.of(context).closeDrawer();
-                if (index != currentSideBarItemSelected) {
+                if (index != currentSideBarItemSelected &&
+                    index < sideBarItems.length - 1) {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                        builder: (context) => sideBarItems[index].route),
+                        builder: (context) => sideBarItems[index].route!),
                   );
                   currentSideBarItemSelected = index;
+                  setState(() {});
+                } else {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => const WelcomeScreen()),
+                  );
+                  currentSideBarItemSelected = 0;
                   setState(() {});
                 }
               },
